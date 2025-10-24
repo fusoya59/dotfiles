@@ -129,7 +129,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm use --silent stable
 
-export PATH="$PATH:/home/mark/.local/bin"
+export PATH="$PATH:/home/{user}/.local/bin"
 if [[ -f "$HOME/.config/secrets/zsh.env" ]]; then
   source "$HOME/.config/secrets/zsh.env"  # contains API keys and other private exports
 fi
