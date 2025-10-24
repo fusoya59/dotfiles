@@ -1,0 +1,40 @@
+@import "mocha.css";
+* {
+    font-family: FiraCode Nerd Font;
+    font-size: 14px;
+    color: @text;
+}
+
+#waybar {
+    background: alpha(@base, 0.9);
+    border: 1px solid alpha(@crust, 0.3);
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: @mantle;
+}
+
+#workspaces button.active {
+    background: @surface0;
+    color: @mantle;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: @surface1;
+    border: transparent;
+    color: @lavender;
+}
+
+#clock {
+    font-weight: bold;
+}
+
+#pulseaudio, #network, #backlight, #battery {
+    padding: 0 10px;
+}
+
+#pulseaudio.muted {
+    color: #ff5555;
+}
