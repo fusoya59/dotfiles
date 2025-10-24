@@ -12,11 +12,24 @@ This repository keeps reproducible configuration for the shell, terminal multipl
 
 Each directory mirrors its target location underneath `$HOME`, which makes the repo compatible with symlink managers such as GNU stow or chezmoi.
 
+## Installation
+1. Install GNU Stow (for example `sudo pacman -S stow`, `sudo apt install stow`, or `brew install stow` depending on your platform).
+2. Clone this repository and `cd` into it.
+3. Install the packages listed in the Dependencies section (or adjust the configs to match what you have available).
+   - For the shell setup, make sure `zsh` is installed, then install [Oh My Zsh](https://ohmyz.sh/#install) and the [Powerlevel10k](https://github.com/romkatv/powerlevel10k#oh-my-zsh) theme, for example:
+     ```sh
+     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
+       ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+     ```
+4. Run the `stow` command shown below to symlink the desired components into your home directory.
+
 ## Dependencies
 The configs assume the following packages and assets are installed:
 
 - Hyprland stack: `hyprland`, `hypridle`, `hyprlock`, `hyprpaper`
 - Desktop extras: `waybar`, `waypaper`, `swaync`
+- Shell environment: `zsh`, `oh-my-zsh`, `powerlevel10k`
 - Terminal and fonts: `kitty`, FiraCode Nerd Font
 - Launchers and defaults: `rofi`, `nautilus`, `brave-browser`
 - System helpers used in keybinds: `pipewire`/`wireplumber` (provides `wpctl`), `playerctl`, `brightnessctl`, `impala`
