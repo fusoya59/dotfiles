@@ -1,0 +1,11 @@
+configuration {
+    modi: "combi";
+    combi-modi: "drun,emoji,run";
+    combi-display-format: "{text}";
+    display-combi: "󰍉 ";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    font: "FiraCode Nerd Font 12";
+}
+@theme "catppuccin-default.rasi"
+
