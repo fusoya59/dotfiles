@@ -6,17 +6,18 @@
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio", "network", "backlight", "battery"],
   "hyprland/workspaces": {
-    "format": "{name}",
+    "format": "{icon} ",
     "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
-      "4": [],
-      "5": []
+      "4": []
     },
     "format-icons": {
-      "active": "[{name}]",
-      "default": "{name}"
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
     }
   },
   "clock": {
