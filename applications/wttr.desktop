@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Weather
+Comment=Display weather for Irvine, CA
+Exec=kitty --class wttr -e /bin/bash -c "curl 'wttr.in/Irvine,California?u' && read -p 'Press Enter to exit...'"
+Icon=weather-clear
+Terminal=false
+Type=Application
+Categories=Utility;
