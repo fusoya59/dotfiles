@@ -4,7 +4,7 @@
   "height": 30,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "network", "backlight", "battery"],
+  "modules-right": ["pulseaudio", "network", "backlight", "battery", "custom/swaync"],
   "hyprland/workspaces": {
     "format": "{icon} ",
     "persistent-workspaces": {
@@ -21,7 +21,7 @@
     }
   },
   "clock": {
-    "format": "{:%I:%M %p}",
+    "format": "{:%a, %I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "pulseaudio": {
@@ -52,5 +52,20 @@
       "warning": 30,
       "critical": 15
     }
+  },
+    "custom/swaync": {
+    "format": " {icon} ",
+    "format-icons": {
+      "notification": "🔔",
+      "none": "🔔",
+      "dnd-notification": "🔕",
+      "dnd-none": "🔕"
+    },
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+    "tooltip": true
   }
 }
