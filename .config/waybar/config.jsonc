@@ -21,40 +21,45 @@
     }
   },
   "clock": {
-    "format": "{:%a, %I:%M %p}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "{:%a, %b %d, %I:%M %p}"
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{icon}",
     "format-muted": "🔇",
     "format-icons": {
       "default": ["🔈", "🔉", "🔊"]
-    }
+    },
+    "tooltip-format": "{volume}%"
   },
   "network": {
-    "format-wifi": "{essid} ({signalStrength}%) 📶",
-    "format-ethernet": "Ethernet 🖧",
-    "format-disconnected": "Disconnected ⚠",
-    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+    "format-wifi": "📶",
+    "format-ethernet": "🖧",
+    "format-disconnected": "⚠",
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "Ethernet",
+    "tooltip-format-disconnected": "Disconnected",
     "on-click": "kitty -e impala"
   },
   "backlight": {
-    "format": "{percent}% 💡",
+    "format": "💡",
     "on-scroll-up": "brightnessctl set +5%",
-    "on-scroll-down": "brightnessctl set 5%-"
+    "on-scroll-down": "brightnessctl set 5%-",
+    "tooltip-format": "{percent}%"
   },
   "battery": {
-    "format": "{capacity}% {icon}",
+    "format": "{icon}",
     "format-icons": ["🔋", "🔋", "🔋", "🔋", "🔋"],
-    "format-charging": "{capacity}% ⚡",
-    "format-plugged": "{capacity}% 🔌",
+    "format-charging": "⚡",
+    "format-plugged": "🔌",
     "states": {
       "warning": 30,
       "critical": 15
-    }
+    },
+    "tooltip-format-plugged": "{capacity}%"
   },
-    "custom/swaync": {
-    "format": " {icon} ",
+  "custom/swaync": {
+    "format": "{icon}",
     "format-icons": {
       "notification": "🔔",
       "none": "🔔",
@@ -66,6 +71,7 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true,
-    "tooltip": true
+    "tooltip": true,
+    "tooltip-format": "{} notifcation(s)"
   }
 }
