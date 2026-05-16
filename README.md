@@ -6,6 +6,7 @@ This repository keeps reproducible configuration for the shell, terminal multipl
 - `zsh/` – everything that normally lives in `$HOME` and is loaded by `zsh`, including Powerlevel10k configuration.
 - `tmux/` – tmux configuration and helper scripts.
 - `hypr/` – Hyprland, hypridle, hyprlock, and hyprpaper configuration for `~/.config/hypr`.
+- `ghostty/` – Ghostty terminal configuration for `~/.config/ghostty`, including theme and opacity settings.
 - `kitty/` – Kitty terminal configuration for `~/.config/kitty`, including font and opacity settings.
 - `waybar/` – Waybar status bar configuration and Catppuccin styling for `~/.config/waybar`.
 - `waypaper/` – Waypaper wallpaper manager configuration for `~/.config/waypaper` (configured to drive hyprpaper).
@@ -30,7 +31,7 @@ The configs assume the following packages and assets are installed:
 - Hyprland stack: `hyprland`, `hypridle`, `hyprlock`, `hyprpaper`
 - Desktop extras: `waybar`, `waypaper`, `swaync`
 - Shell environment: `zsh`, `oh-my-zsh`, `powerlevel10k`
-- Terminal and fonts: `kitty`, FiraCode Nerd Font
+- Terminal and fonts: `ghostty` or `kitty`, FiraCode Nerd Font
 - Launchers and defaults: `rofi`, `nautilus`, `brave-browser`
 - System helpers used in keybinds: `pipewire`/`wireplumber` (provides `wpctl`), `playerctl`, `brightnessctl`, `impala`
 - Optional tooling: `ddcutil` if you enable the commented dimming block in `hypridle.conf`
@@ -39,7 +40,7 @@ The configs assume the following packages and assets are installed:
 ## Usage
 ```sh
 # from the repo root
-stow hypr kitty waybar waypaper zsh tmux
+stow hypr ghostty kitty waybar waypaper zsh tmux
 ```
 If you prefer manual deployment, copy the files to the corresponding locations under `$HOME`.
 

@@ -1,0 +1,4 @@
+command = /usr/bin/zsh
+theme = Catppuccin Mocha
+background-opacity = 0.85
+background-blur = 4

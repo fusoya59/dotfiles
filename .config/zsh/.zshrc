@@ -116,9 +116,9 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/fzf/key-bindings.zsh
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
 
 alias ls='eza --color=always --group-directories-first'
@@ -129,7 +129,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm use --silent stable
 
-export PATH="$PATH:/home/{user}/.local/bin"
+export PATH="/home/luke/.local/share/pnpm/bin:$PATH"
+export PATH="$PATH:/home/luke/.local/bin"
 if [[ -f "$HOME/.config/secrets/zsh.env" ]]; then
   source "$HOME/.config/secrets/zsh.env"  # contains API keys and other private exports
 fi
